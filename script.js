@@ -8,22 +8,22 @@
 //   ["Michael", "Peter", "Steven"],
 // ];
 
-const jonas = {
-  firstName: "Jonas",
-  lastName: "Schmedtmann",
-  age: 2037 - 1991,
-  job: "teacher",
-  friends: ["Michael", "Peter", "Steven"],
-};
+// const jonas = {
+//   firstName: "Jonas",
+//   lastName: "Schmedtmann",
+//   age: 2037 - 1991,
+//   job: "teacher",
+//   friends: ["Michael", "Peter", "Steven"],
+// };
 
-jonas.location = "Portugal";
-jonas["twitter"] = "@jonasschmedtman";
+// jonas.location = "Portugal";
+// jonas["twitter"] = "@jonasschmedtman";
 
 // console.log(jonas);
 // console.log(jonas.lastName);
 // console.log(jonas["lastName"]);
 
-const nameKey = "Name";
+// const nameKey = "Name";
 
 // console.log(jonas["first" + nameKey]);
 // console.log(jonas["last" + nameKey]);
@@ -40,20 +40,35 @@ const nameKey = "Name";
 //   );
 // }
 
-const bestFriend = prompt(
-  "Who is Jonas' best friend? Choose from Michael, Peter or Steven."
-);
+// const bestFriend = prompt(
+//   "Who is Jonas' best friend? Choose from Michael, Peter or Steven."
+// );
 
-if (
-  bestFriend === "Michael" ||
-  bestFriend === "Peter" ||
-  bestFriend === "Steven"
-) {
-  console.log(
-    ` ${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${bestFriend}.`
-  );
-} else {
-  console.log(
-    `Wrong input! ${bestFriend} is not one of Jonas' friends. Please choose between Michael, Peter or Steven.`
-  );
-}
+// if (
+//   bestFriend === "Michael" ||
+//   bestFriend === "Peter" ||
+//   bestFriend === "Steven"
+// ) {
+//   console.log(
+//     ` ${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${bestFriend}.`
+//   );
+// } else {
+//   console.log(
+//     `Wrong input! ${bestFriend} is not one of Jonas' friends. Please choose between Michael, Peter or Steven.`
+//   );
+// }
+
+const jonas = {
+  firstName: "Jonas",
+  lastName: "Schmedtmann",
+  birthYear: 1991,
+  job: "teacher",
+  friends: ["Michael", "Peter", "Steven"],
+  hasDriversLicense: true,
+
+  calcAge: function (birthYear) {
+    return 2022 - birthYear;
+  },
+};
+
+console.log(jonas.calcAge(1962));
